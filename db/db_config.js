@@ -1,7 +1,7 @@
 
 const { Sequelize, DataTypes} = require ('sequelize');
 
-const sequelize = new Sequelize('postgres://admin:admin@localhost:5432/primavera')
+const sequelize = new Sequelize('postgres://admin:admin@localhost:5432/primavera' || process.env.DATABASE)
 
 const Locales = sequelize.define('locales',{
 
